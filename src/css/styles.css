@@ -1,25 +1,166 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+/* ---------- Countdown timer ---------- */
+
+body {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+input {
+  outline: none;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.timer-container,
+.snackbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.timer-wrapper {
+  margin-bottom: 32px;
+}
+
+#datetime-picker {
+  width: 272px;
+  transition: border-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+#datetime-picker:hover {
+  border-color: black;
+}
+
+#datetime-picker:focus {
+  border-color: #4e75ff;
+}
+
+#datetime-picker:disabled {
+  border-color: #808080;
+  color: #808080;
+}
+
+.timer-btn {
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  background-color: #4e75ff;
+  outline: none;
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.timer-btn:hover,
+.timer-btn:focus {
+  background-color: #6c8cff;
+}
+
+.timer-btn:disabled {
+  color: #989898;
+  background-color: #cfcfcf;
+}
+
+.timer {
+  display: flex;
+  column-gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.value {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.label {
+  text-transform: uppercase;
+}
+
+/* ------- Generator of promises ------- */
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  width: 360px;
+  gap: 16px;
+}
+
+.input-label-number {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input[type='number'] {
+  width: 360px;
+}
+
+fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  padding: 0 16px;
+}
+label {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+
+button[type='submit'] {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  border: none;
+  font-family: inherit;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
+  transition: background-color 250ms ease-in-out;
+}
+
+button[type='submit']:hover {
+  background-color: #6c8cff;
 }
